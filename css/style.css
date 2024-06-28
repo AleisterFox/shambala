@@ -1,0 +1,1799 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wow {
+    animation-duration: 1s !important;
+    /* animation-timing-function: linear; */
+}
+
+
+.delay {
+    animation-delay: 0.5s !important;
+}
+
+.delay1 {
+    animation-delay: 1s !important;
+}
+
+.delay2 {
+    animation-delay: 1.5s !important;
+}
+
+.delay3 {
+    animation-delay: 2s !important;
+}
+
+@font-face {
+    font-family: 'Didot';
+    src: url('../fonts/Didot.otf');
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: 'Didot', sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --normalize: -8rem;
+    --width: calc(100% - 16rem);
+    --padding: 0rem 8rem;
+    --center: 0 auto;
+    --main-color: #B2623B;
+    --orange: #FF5C00;
+}
+
+p {
+    color: #5A5A5A;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.whatsapp {
+    background-color: #25D366;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100rem;
+    border: 1px solid black;
+    position: fixed;
+    right: 2rem;
+    z-index: 10001;
+    bottom: 5rem;
+}
+
+.whatsapp a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp i {
+    font-size: 3rem;
+    color: white;
+}
+
+.button {
+    min-width: 10rem;
+    width: fit-content;
+    min-height: 4rem;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: white !important;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #cf7345;
+}
+
+.button.secondary {
+    background-color: var(--green);
+}
+
+.button.secondary:hover {
+    background-color: #2cebe1;
+}
+
+header {
+    height: 15rem;
+    width: 100%;
+    margin: var(--center);
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: var(--width);
+    margin: var(--center);
+    height: 100%;
+    padding: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    position: relative;
+}
+
+nav>a:first-child {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav>a:last-child {
+    display: none;
+}
+
+header nav .menu__button {
+    display: none;
+}
+
+header figure, header picture {
+    display: block;
+    height: 8rem;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10rem;
+    height: 100%;
+    width: 100%;
+}
+
+.menu li>a, .menu li>p {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-weight: 400;
+    transition: all 0.3s linear;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu a.contact-option {
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu a.contact-option img {
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+}
+
+.menu>li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-width: 10rem;
+}
+
+.menu .button__secondary {
+    min-height: 5rem;
+}
+
+nav.mov {
+    display: none;
+}
+
+nav .redes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .redes a {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+/* body main section:first-of-type {
+    padding-top: 10rem !important;
+} */
+
+section {
+    padding: var(--padding);
+    margin-bottom: 10rem;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 10rem;
+}
+
+section>h2 {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 5rem;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.flexbox figure {
+    flex-basis: 40rem;
+    height: 40rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.flexbox .textbox {
+    flex-basis: 40rem;
+    min-height: 40rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    background-color: var(--gray);
+    padding: 3rem;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.bg figure {
+    width: 100%;
+    height: 100%;
+}
+
+.content-wrapper {
+    position: relative;
+    min-height: 200vh;
+    height: fit-content;
+}
+
+/* HERO  */
+
+#hero {
+    min-height: 100vh;
+    padding: 0;
+    /* padding-top: 15rem !important; */
+    margin-bottom: 0;
+}
+
+#owl-hero {
+    width: 100%;
+    height: 100%;
+}
+
+#owl-hero .item {
+    height: calc(100vh - 15rem);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#owl-hero .item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+#owl-hero .item figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
+
+#owl-hero p {
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    width: 60%;
+}
+
+#owl-hero img {
+    width: 100%;
+    height: 100%;
+}
+
+.animated {
+    -webkit-animation-duration: 0 ms !important;
+    animation-duration: 0 ms !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+}
+
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+#hero .owl-dots {
+    display: none;
+}
+
+/* HERO  */
+
+.reservacion-box {
+    height: 6rem;
+    width: 80rem;
+    max-width: 100%;
+    margin: var(--center);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 13rem;
+    z-index: 1000;
+    margin-top: -3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reservacion-box .button {
+    height: 100%;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.reservation-date {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    border: 3px solid #5A5A5A;
+    position: relative;
+}
+
+.reservation-date:hover {
+    cursor: pointer;
+}
+
+.reservation-date .info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.reservation-date .fechas {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.reservation-date .encabezado {
+    color: #ADADAD;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.reservation-date .fechas p {
+    color: var(--main-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.reservation-date .icono figure {
+    width: 2.5rem;
+}
+
+.reservation-date .calendario {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 4px solid #D5D5D5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30rem;
+    max-width: 90vw;
+    display: none;
+}
+
+calendar-month {
+    --color-accent: var(--main-color);
+    --color-text-on-accent: #ffffff;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    width: 100%;
+    aspect-ratio: 1;
+
+    &::part(button) {
+        border-radius: 0.8rem;
+        width: 26px;
+        height: 26px;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &::part(range-inner) {
+        background-color: #FFDDCF;
+        color: black;
+    }
+
+    &::part(selected) {
+        border: 2px solid #FFB18F;
+    }
+
+    &::part(table) {
+        height: 100%;
+    }
+
+    &::part(th) {
+        font-size: 1.2rem;
+
+    }
+}
+
+calendar-range {
+    svg {
+        height: 20px;
+        width: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.5;
+        border-radius: 10rem;
+        overflow: hidden;
+    }
+
+    path {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    width: 100%;
+    aspect-ratio: 1;
+
+    &::part(heading){
+        font-size: 1.4rem;
+    }
+
+    &::part(next), &::part(previous) {
+        border: 2px solid #FFD8C8;
+        border-radius: 10rem;
+    }
+}
+
+calendar-month table {
+    font-size: 1.8rem !important;
+}
+
+/* DESCRIPCION  */
+
+#descripcion {
+    margin-top: 10rem;
+}
+
+#descripcion h1 {
+    color: var(--main-color);
+    font-size: 6rem;
+    text-align: center;
+    width: 80%;
+    margin: var(--center);
+    margin-bottom: 5rem;
+}
+
+#descripcion p {
+    font-size: 2.4rem;
+    text-align: center;
+    width: 85%;
+    margin: var(--center);
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+
+#descripcion figure {
+    height: 40rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+}
+
+#descripcion h3 {
+    font-size: 3rem;
+    color: #5A5A5A;
+    text-align: center;
+    width: 40rem;
+    margin: 10rem auto;
+}
+
+/* DESCRIPCION  */
+
+
+/* BANNER  */
+
+.banner {
+    position: relative;
+    height: 45rem;
+    padding: var(--padding);
+    align-content: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.77), rgba(255, 255, 255, 0.1));
+}
+
+.banner2 {
+    background: none;
+}
+
+.banner .bg {
+    z-index: -2;
+}
+
+.banner h2 {
+    font-size: 7rem;
+    color: white;
+    width: 70rem;
+}
+
+.banner3 h2 {
+    width: 100%;
+}
+
+.banner span {
+    text-decoration: underline;
+}
+
+.banner p {
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.banner .button {
+    margin: var(--center);
+    margin-top: 4rem;
+    height: 7rem;
+    width: 23rem;
+    border-radius: 1.5rem;
+}
+
+/* BANNER  */
+
+/* ACTIVITIES CARDS  */
+
+#activities-cards {
+    background: linear-gradient(rgba(255, 177, 143, 0.4), rgba(171, 84, 46, 0.4));
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#activities-cards .container {
+    display: flex;
+    justify-content: center;
+    column-gap: 10rem;
+}
+
+.card {
+    flex-basis: 35rem;
+    border-radius: 2rem;
+    background-color: var(--orange);
+    padding: 6rem 4rem;
+}
+
+.card figure {
+    width: 10rem;
+    height: 10rem;
+    margin: var(--center);
+    margin-bottom: 4rem;
+}
+
+.card p {
+    font-size: 2.4rem;
+    color: white;
+    text-align: center;
+}
+
+/* ACTIVITIES CARDS  */
+
+
+/* AMENIDADES  */
+
+.owl-sldr .item {
+    height: 55rem;
+    padding: 4rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    transition: all 1s ease-in-out;
+}
+
+.owl-sldr .item:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+        linear-gradient(rgba(0, 0, 0, 0.1) 50%, #ff5e00cc);
+}
+
+.owl-sldr .item h3 {
+    color: white;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    width: 20rem;
+    font-weight: 500;
+}
+
+.owl-sldr .item a {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.owl-sldr .item a i {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-sldr .item a:hover i {
+    transform: translateX(1rem);
+}
+
+#amenidades h2, #servicios__extra h2 {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.owl-sldr .owl-nav {
+    display: initial !important;
+    position: absolute;
+    top: -80px;
+    right: 0;
+}
+
+.owl-sldr .owl-nav button {
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--orange) !important;
+    border-radius: 10rem !important;
+    font-size: 3rem !important;
+    color: white !important;
+}
+
+/* AMENIDADES  */
+
+/* ACTIVIDADES  */
+
+#actividades {
+    padding-top: 5rem;
+}
+
+#actividades .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#actividades .container .item {
+    flex-basis: 50rem;
+    position: relative;
+    height: 55rem;
+    padding: 4rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    transition: all 1s ease-in-out;
+}
+
+#actividades .container .item:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+        linear-gradient(rgba(0, 0, 0, 0.1) 50%, #ff5e00cc);
+}
+
+#actividades .container .item h3 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+#actividades .container .item a {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#actividades .container .item a i {
+    transition: all 0.3s ease-in-out;
+}
+
+#actividades .container .item a:hover i {
+    transform: translateX(1rem);
+}
+
+/* ACTIVIDADES  */
+
+/* UBICACION  */
+
+#ubicacion {
+    margin-top: 10rem;
+}
+
+#ubicacion iframe {
+    width: 100%;
+    border-radius: 4rem;
+    box-shadow: 1rem 1rem 2.5rem 0 rgba(0, 0, 0, 0.25);
+}
+
+#ubicacion .mapa {
+    position: relative;
+}
+
+#ubicacion .address {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.4rem;
+    height: 8rem;
+    width: 50rem;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--orange);
+    color: white;
+    position: absolute;
+    top: -4rem;
+    right: -2rem;
+}
+
+.address p {
+    color: white;
+}
+
+/* UBICACION  */
+
+
+/* CONTACTO  */
+
+#contacto-hero {
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 97.4%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0;
+}
+
+#contacto-hero .container {
+    padding-bottom: 15rem;
+}
+
+#contacto-hero h2 {
+    width: 80rem;
+    max-width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--main-color);
+    margin: var(--center);
+    text-align: center;
+}
+
+#contacto-hero .tape {
+    position: absolute;
+    width: 40rem;
+    max-width: 100%;
+    bottom: -5rem;
+    right: 0;
+}
+
+#contacto-hero .tape figure {
+    width: 100%;
+}
+
+#contacto h2 {
+    font-size: 5rem;
+}
+
+#contacto {
+    position: relative;
+    min-height: 70vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#contacto form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20rem;
+    row-gap: 2rem;
+    background-color: #fff;
+    padding: 4rem;
+    width: 100%;
+    border-radius: 5rem;
+}
+
+#contacto .left, #contacto .right {
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
+
+#contacto .input {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+#contacto input, #contacto textarea {
+    border: none;
+    outline: none;
+    background: #E7E7E7;
+    font-size: 1.8rem;
+    font-family: 'Didot';
+    border-radius: 1.5rem;
+}
+
+#contacto label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contacto input {
+    height: 5rem;
+    width: 100%;
+    text-indent: 1rem;
+}
+
+#contacto textarea {
+    width: 100%;
+    height: 20rem;
+    resize: none;
+    padding: 1rem;
+}
+
+#contacto button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Didot';
+    width: 15rem;
+    height: 5rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+}
+
+#contacto ::placeholder {
+    font-size: 2rem;
+    font-family: 'Didot';
+}
+
+#contacto .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+#contacto .contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#contacto .contact-info span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #FFB18F;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10rem;
+    font-size: 2.5rem;
+}
+
+#contacto .contact-info a, #contacto .contact-info p {
+    font-size: 2rem;
+    color: black;
+    max-width: 30rem;
+}
+
+/* CONTACTO  */
+
+
+
+/* CABAÑAS  */
+
+.cabana {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5rem;
+    background-color: #EBEBEB;
+    min-height: 40rem;
+    margin: 5rem 0;
+}
+
+.cabana figure {
+    flex-basis: 40rem;
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 5rem;
+}
+
+.cabana .info {
+    flex-basis: 40rem;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cabana .tipo {
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 0.5rem;
+}
+
+.cabana .tipo h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cabana .descripcion {
+    margin: 4rem 0;
+}
+
+.cabana p {
+    color: black;
+}
+
+.cabana .descripcion p {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cabana .extra-info {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    justify-content: space-between;
+}
+
+.cabana .extra-info div {
+    flex-grow: 1;
+}
+
+.cabana .extra-info h4 {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cabana .services-icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.cabana .services-icons img {
+    width: 4rem;
+}
+
+.cabana .personas p {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.cabana .personas p span {
+    background-color: black;
+    color: #EBEBEB;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+}
+
+.cabana .botones {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.cabana .botones .button {
+    width: 20rem;
+    height: 6rem;
+}
+
+
+#galeria h2 {
+    text-align: left;
+}
+
+#galeria .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+#galeria .container figure {
+    flex-basis: 35rem;
+    flex-grow: 1;
+    height: 40rem;
+}
+
+#cabana-servicios .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+#cabana-servicios .sv-ca {
+    padding: 2rem 3rem;
+    background-color: #FFDACA;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    border-radius: 2rem;
+}
+
+#cabana-servicios .sv-ca img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+}
+
+#cabana-servicios .sv-ca p {
+    font-weight: 600;
+    color: black;
+}
+
+#cabana-servicios .button {
+    width: 20rem;
+    height: 6rem;
+    margin: var(--center);
+    margin-top: 10rem;
+}
+
+#cabana {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#cabana h2 {
+    text-align: right;
+    text-decoration: underline black;
+}
+
+#cabana .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    height: fit-content;
+}
+
+#cabana .container figure {
+    flex-basis: 60rem;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 2rem;
+    height: 40rem;
+}
+
+#cabana .container .cabania-informacion {
+    flex-basis: 50rem;
+    max-width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 40rem;
+    gap: 5rem;
+}
+
+#cabana .iconos {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#cabana .cabania-informacion img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+}
+
+#cabana .container .cabania-informacion p {
+    font-size: 2.4rem;
+}
+
+#cabana .cabania-informacion .row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#cabana .cabania-informacion .row  img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+#cabana .cabania-informacion .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    justify-content: space-between;
+}
+
+#cabana .cabania-informacion .bottom .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* CABAÑAS  */
+
+
+/* ACTIVIDADES  */
+
+.actividad {
+    margin: 10rem 0;
+}
+
+.actividad h2 {
+    color: var(--main-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    margin: var(--center);
+    margin-bottom: 10rem;
+}
+
+.actividad__info {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10rem;
+    row-gap: 4rem;
+}
+
+.actividad__info>p {
+    flex-basis: 50rem;
+    flex-grow: 4;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.actividad__info--extra {
+    flex-basis: 25rem;
+    flex-grow: 1;
+}
+
+.inf {
+    background-color: #EAEAEA;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+}
+
+.inf h4 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.inf__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.inf__bottom img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.inf__bottom p {
+    width: fit-content;
+}
+
+.actividad__galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 10rem;
+}
+
+.actividad__galeria figure {
+    height: 40rem;
+    flex-basis: 40rem;
+}
+
+.actividad__galeria figure:first-of-type {
+    flex-basis: 100%;
+}
+
+.actividad__galeria figure:nth-child(3) {
+    flex-grow: 1;
+}
+
+/* ACTIVIDADES  */
+
+/* AMENIDADES  */
+
+.amenidad {
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.amenidad .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.amenidad .left, .amenidad .right {
+    flex-basis: 40rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+
+.amenidad figure {
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.amenidad h2 {
+    font-weight: 600;
+    color: var(--main-color);
+    width: fit-content;
+    min-width: 20rem;
+    margin: var(--center);
+    border-bottom: 3px solid black;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.amenidad p {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.amenidad .horario {
+    background-color: black;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10rem;
+    row-gap: 2rem;
+    min-height: 10rem;
+    width: fit-content;
+    margin: var(--center);
+    max-width: 100%;
+}
+
+.amenidad .horario img {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(1);
+}
+
+.amenidad .horario h3, .amenidad .horario p {
+    color: white;
+}
+
+.amenidad .horario h3 {
+    font-size: 3rem;
+}
+
+.amenidad .horas {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.amenidad__galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.amenidad__galeria figure {
+    flex-basis: 30rem;
+    flex-grow: 1;
+    aspect-ratio: 1;
+    max-height: 45rem;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.amenidad:nth-of-type(even) .container .right {
+    order: 1;
+}
+
+.amenidad:nth-of-type(even) .container .left {
+    order: 2;
+}
+
+/* AMENIDADES  */
+
+/* FOOTER  */
+
+footer {
+    position: relative;
+    background: linear-gradient(#AB542E, #FF8E5C);
+}
+
+.footer-logo {
+    width: 30rem;
+    margin: var(--center);
+    margin-bottom: 2rem;
+}
+
+footer .top {
+    padding: var(--padding);
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .navegacion {
+    padding-left: 8rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+footer .navegacion li {
+    margin: 2rem 0;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    margin: var(--center);
+}
+
+footer .top .redes a {
+    font-size: 2.5rem;
+}
+
+footer h3 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+footer .top a, footer .top p {
+    font-size: 1.6rem;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+footer .iconos-redes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .iconos-redes img {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: block;
+}
+
+footer .cita p {
+    max-width: 25rem;
+    text-align: center;
+}
+
+footer .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+footer .bottom img {
+    width: 2.2rem;
+}
+
+footer .bottom p, footer .bottom a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+}
+
+/* FOOTER  */
+
+
+
+@media screen and (max-width: 850px) {
+    :root {
+        --normalize: -2rem;
+        --width: calc(100% - 4rem);
+        --padding: 0rem 2rem;
+    }
+
+    nav.desk {
+        display: none;
+    }
+
+    nav.mov {
+        display: flex;
+    }
+
+    header .menu {
+        position: absolute;
+        top: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        width: 107vw;
+        left: -2rem;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        height: fit-content;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    header .menu li {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    header .menu li a {
+        margin: var(--center);
+    }
+
+    header nav>a {
+        display: block;
+    }
+
+    nav>a:last-child {
+        display: block;
+    }
+
+    header nav .menu__button {
+        display: block;
+        font-size: 4rem;
+        color: var(--main-color);
+        transition: all 0.5s ease-in-out;
+        margin-right: 2rem;
+    }
+
+    .to-right {
+        flex-direction: column-reverse;
+    }
+
+    .row.to-right .left, .row.to-right .right {
+        flex-basis: initial;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    nav>a:first-child h3 {
+        font-size: 1.2rem;
+    }
+
+    nav>a:first-child p {
+        font-size: 1rem;
+    }
+
+    header .nombre {
+        max-width: 20rem;
+    }
+}
+
+
+@media screen and (max-width: 769px) {}
+
+@media screen and (max-width: 550px) {
+
+    header figure, header picture {
+        height: 8rem;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    #hero p {
+        font-size: 5rem;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 4rem !important;
+    }
+
+    .cabana .info {
+        padding: 3rem 1rem;
+    }
+
+    .cabana .personas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+    }
+
+    .cabana .extra-info .personas h4 {
+        margin-bottom: 0;
+    }
+
+    .cabana figure {
+        aspect-ratio: 1;
+    }
+
+}
+
+
+
+@keyframes showMenu {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideMenu {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+
+    50% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(-0.5rem);
+    }
+
+}
+
+
+@keyframes bounceInRightCustom {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(30px, 0, 0);
+        -ms-transform: translate3d(30px, 0, 0);
+        transform: translate3d(30px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(-25px, 0, 0);
+        -ms-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        -ms-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        -ms-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes customPulse {
+    0% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(1.2);
+        -ms-transform: scaleY(1.2);
+        transform: scaleY(1.2);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes customPulseClose {
+    0% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(0.85);
+        -ms-transform: scaleY(0.85);
+        transform: scaleY(0.85);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
