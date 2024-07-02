@@ -384,7 +384,8 @@ section>h2 {
     margin-top: -3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .reservacion-box .button {
@@ -585,6 +586,7 @@ calendar-month table {
     font-size: 7rem;
     color: white;
     width: 70rem;
+    max-width: 100%;
 }
 
 .banner3 h2 {
@@ -620,8 +622,10 @@ calendar-month table {
 
 #activities-cards .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     column-gap: 10rem;
+    row-gap: 2rem;
 }
 
 .card {
@@ -660,6 +664,7 @@ calendar-month table {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
     transition: all 1s ease-in-out;
+    max-width: calc(100vw - 4rem);
 }
 
 .owl-sldr .item:hover {
@@ -696,6 +701,7 @@ calendar-month table {
     text-align: left;
     font-size: 4rem;
     font-weight: 500;
+    margin-bottom: 8rem;
 }
 
 .owl-sldr .owl-nav {
@@ -811,6 +817,98 @@ calendar-month table {
 }
 
 /* UBICACION  */
+
+
+
+/* EVENTOS  */
+
+#eventos {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
+
+.evento {
+    background: linear-gradient(rgba(0, 0, 0, 0) 20%, #FFB18F 40%);
+    padding-top: 10rem;
+}
+
+.evento h2 {
+    color: var(--main-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    margin: var(--center);
+    margin-bottom: 5rem;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.evento p {
+    font-weight: 700;
+    font-size: 2.4rem;
+    width: var(--width);
+    margin: var(--center);
+    text-align: center;
+}
+
+.evento__caracteristicas {
+    padding: 2rem 10rem;
+    background-color: black;
+    color: white;
+    border-radius: 3rem;
+    width: 100rem;
+    max-width: 90%;
+    margin: var(--center);
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+}
+
+.evento__caracteristicas > h3 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+.evento__caracteristicas .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 5rem;
+}
+
+.evento__caracteristicas .contenedor h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.evento__caracteristicas .contenedor ul {
+    list-style: inside;
+}
+
+.evento__caracteristicas .contenedor li {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.evento__gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.evento__gallery figure {
+    flex-basis: 35rem;
+    flex-grow: 1;
+    height: 45rem;
+}
+
+.evento__gallery figure:first-child {
+    flex-basis: 100%;
+}
+
+/* EVENTOS  */
+
+
 
 
 /* CONTACTO  */
@@ -1354,6 +1452,12 @@ calendar-month table {
     max-width: 100%;
 }
 
+.amenidad .button {
+    height: 6rem;
+    width: 15rem;
+    margin: var(--center);
+}
+
 .amenidad .horario img {
     width: 3rem;
     height: 3rem;
@@ -1531,6 +1635,7 @@ footer .bottom p, footer .bottom a {
         display: none;
         height: fit-content;
         border-bottom: 2px solid var(--main-color);
+        padding-top: 4rem;
     }
 
     header .menu li {
@@ -1540,6 +1645,11 @@ footer .bottom p, footer .bottom a {
 
     header .menu li a {
         margin: var(--center);
+        color: var(--main-color) !important;
+    }
+
+    header .menu li a.button {
+        color: white !important;
     }
 
     header nav>a {
@@ -1564,6 +1674,18 @@ footer .bottom p, footer .bottom a {
 
     .row.to-right .left, .row.to-right .right {
         flex-basis: initial;
+    }
+
+    footer .navegacion {
+        padding-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer .top {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
 }
@@ -1601,11 +1723,11 @@ footer .bottom p, footer .bottom a {
     }
 
     h1 {
-        font-size: 6rem;
+        font-size: 4rem !important;
     }
 
     h2 {
-        font-size: 4rem !important;
+        font-size: 3rem !important;
     }
 
     .cabana .info {
@@ -1625,6 +1747,18 @@ footer .bottom p, footer .bottom a {
 
     .cabana figure {
         aspect-ratio: 1;
+    }
+
+    .evento__caracteristicas {
+        padding: 2rem;
+    }
+
+    .owl-sldr .item {
+        padding: 2rem;
+    }
+
+    #ubicacion .address {
+        right: 0;
     }
 
 }

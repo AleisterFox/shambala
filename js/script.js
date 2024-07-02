@@ -1,5 +1,6 @@
 const menu = document.querySelectorAll(".menu");
 const burguerButton = document.querySelector(".menu__button");
+const menuItem = document.querySelector(".menu-item");
 
 burguerButton.addEventListener("click", () => {
   if (this.innerWidth < 851) {
@@ -21,18 +22,28 @@ burguerButton.addEventListener("click", () => {
   }
 });
 
+menuItem.addEventListener("click", () => {
+  menu.forEach((list) => {
+    list.style.animation = "hideMenu 0.5s linear";
+    setTimeout(() => {
+      list.style.display = "none";
+    }, 490);
+    burguerButton.classList.remove("fa-x");
+    burguerButton.classList.add("fa-bars");
+  });
+});
+
 const headerBar = document.querySelector("header");
 const mainHero = document.querySelector("section:first-child");
 const menuOptions = document.querySelectorAll(".menu li>a");
-const logo = document.querySelector('header picture img.escritorio');
-
+const logo = document.querySelector("header picture img.escritorio");
 
 if (window.scrollY === 0 && headerBar.offsetTop === mainHero.offsetTop) {
   headerBar.style.backgroundColor = "transparent";
   menuOptions.forEach((menuOption) => {
     menuOption.style.color = "white";
   });
-  logo.src = 'img/logo-white.png';
+  logo.src = "img/logo-white.png";
 }
 
 window.addEventListener("scroll", function () {
@@ -41,13 +52,13 @@ window.addEventListener("scroll", function () {
     menuOptions.forEach((menuOption) => {
       menuOption.style.color = "white";
     });
-    logo.src = 'img/logo-white.png';
+    logo.src = "img/logo-white.png";
   } else {
     headerBar.style.backgroundColor = "rgba(255, 255, 255, 1)";
     menuOptions.forEach((menuOption) => {
       menuOption.style.color = "var(--main-color)";
     });
-    logo.src = 'img/logo.png';
+    logo.src = "img/logo.png";
   }
 });
 

@@ -132,7 +132,7 @@
           <!-- CALENDARIO  -->
 
         </div>
-        <a href="" class="button">RESERVAR AHORA</a>
+        <a href="reservacion.php" class="button">RESERVAR AHORA</a>
       </div>
 
       <section id="descripcion">

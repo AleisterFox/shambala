@@ -243,7 +243,7 @@
                         <figure><img src="img/alb4.jpg" alt=""></figure>
                     </div>
                 </div>
-            </s>
+            </section>
 
             <section id="contacto">
                 <h2>Contáctanos</h2>

@@ -6,7 +6,7 @@
                 <img src="img/logo.png" alt="" />
             </picture>
         </a>
-
+ 
 
 
         <ul class="menu">
@@ -15,7 +15,7 @@
             <li><a href="actividades.php">Actividades</a></li>
             <li><a href="eventos.php">Eventos</a></li>
             <li><a href="promociones.php">Promociones</a></li>
-            <li><a href="#contacto" class="button">Contacto</a></li>
+            <li class="menu-item"><a href="#contacto" class="button">Contacto</a></li>
         </ul>
         <a><i class="fa-solid fa-bars menu__button"></i></a>
     </nav>
